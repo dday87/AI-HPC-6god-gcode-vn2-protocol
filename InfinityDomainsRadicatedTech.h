@@ -1,12 +1,12 @@
-#ifndef INFINITYDOMAINSRADICATED_H_
-#define INFINITYDOMAINSRADICATED_H_
-
 #include <ifstream>
 #include <cmath>
 #include <thread>
 #include <libsocket>
 
-#DEFINE KILLSIG 0x4444
+#ifndef INFINITYDOMAINSRADICATED_H_
+#define INFINITYDOMAINSRADICATED_H_
+
+#DEFINE KILLSIG 0x1111
 
 class InfinityDomainsRD : public IDRTemplate
 {
@@ -40,23 +40,10 @@ class InfinityDomainsRD : public IDRTemplate
 		std::vector<char> IpAddress = {0,0,0,0};
 		std::list<int> *Ports = nullptr;
 		std::string DefaultThreadT = "-lpthread";
-		std::list<string> IDRSystemCompilers{ "c89", \
-										"c99", \
+		std::list<string> IDRSystemCompilers{ "c99", \
+										"c89", \
 										"cc", \
 										"cxx", \
-										"gcc", \
-										"gxx", \
-										"icc", \
-										"icpc", \
-										"clang", \ 
-										"clangxx", \ 
-										"nvcc", \
-										"gfortran", \
-										"pgfortan", \
-										"p77", \
-										"p99", \
-										"mpicc", \
-										"mpicxx"									
 										};
 		
 		unsigned char IpVectorSize_MIN = 4;
